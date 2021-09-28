@@ -6,9 +6,9 @@ function validatorCpf(strCpf) {
   soma = 0;
 
   if (strCpf.length > 11 || strCpf.length < 11) return false;
-  debugger;
+
   if (strCpf == "00000000000") return false;
-  debugger;
+
   if (typeof strCpf == "number") return false;
 
   for (var i = 1; i <= 9; i++) {
@@ -28,8 +28,7 @@ function validatorCpf(strCpf) {
 
   if (resto == 10 || (resto == 11)) resto = 0;
   if (resto != parseInt(strCpf.substring(10, 11))) return false
-  console.log(resto)
 }
 
 
-validatorCpf("61823305385");
+validatorCpf();
